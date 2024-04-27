@@ -33,4 +33,18 @@ jobs:
         run: | 
            terraform plan
 
+
+     - name: Plan
+      working-directory: vpc
+        run: | 
+           terraform plan
+
+     - name: Apply
+    working-directory: vpc
+        run: | 
+     terraform plan
+
+         
+
+
          
