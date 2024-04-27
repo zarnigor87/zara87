@@ -10,24 +10,26 @@ on:
 jobs:
   build:
     runs-on: ubuntu-latest
-
-    
-    steps:
+   steps:
       
       - uses: actions/checkout@v4
 
       
       - name: Initialize terraform
+        working-directory: vpc
         run: echo Hello, world!
 
       
       - name: Configure workspace
+        working-directory: vpc
+
         run:  
            terraform workspace new dev || terraform workspace select dev
       
 
      
       - name: Plan
+      working-directory: vpc
         run: | 
            terraform plan
 
